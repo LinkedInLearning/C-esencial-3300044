@@ -1,14 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace _3300044_es_ES_00_01
+﻿
+namespace CaracteristicasC
 {
     internal class Cancion
     {
-        public string Titulo { get; set; } 
+        public string Titulo { get; set; }
         public string Artista { get; set; }
         public TimeSpan Duracion { get; set; }
 
