@@ -1,9 +1,14 @@
-﻿
-namespace CaracteristicasC
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace _3300044_es_ES_00_01
 {
     internal class Cancion
     {
-        public string Titulo { get; set; }
+        public string Titulo { get; set; } 
         public string Artista { get; set; }
         public TimeSpan Duracion { get; set; }
 
@@ -14,10 +19,9 @@ namespace CaracteristicasC
             Duracion = duracion;
         }
 
-        public async Task Reproducir()
+        public void Reproducir()
         {
-            await Task.Delay(2000);
-            Console.WriteLine($"Reproduciendo '{Titulo}' de {Artista}... ({Duracion:mm\\:ss})"); //6.0 interpolación
+            Console.WriteLine($"Reproduciendo '{Titulo}' de {Artista}... ({Duracion:mm\\:ss})"); 
         }
     }
 }
