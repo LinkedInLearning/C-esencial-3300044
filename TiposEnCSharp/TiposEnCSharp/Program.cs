@@ -63,7 +63,7 @@ internal class Program
         #endregion
 
         #region Tipo boleano
-        int edad = 15;
+        /*int edad = 15;
         bool esMayor = edad >= 18;
 
         if(esMayor)
@@ -73,12 +73,12 @@ internal class Program
         {
             Console.WriteLine("No es mayor de edad");
         }
-        Console.WriteLine($"valor de esMayor {esMayor}");
+        Console.WriteLine($"valor de esMayor {esMayor}");*/
 
         #endregion
 
         #region Arreglos
-        
+        /*
         int[] numeros = new int[5]; // Declaración
         numeros[0] = 10; // Asignación
         // 10, , , ,
@@ -123,10 +123,19 @@ internal class Program
         Console.WriteLine(string.Join(", ", arregloDesordenado));
 
         int index = Array.IndexOf(arregloDesordenado, 100);
-        Console.WriteLine($" index of 100 en arregloDesordenado {index}");
+        Console.WriteLine($" index of 100 en arregloDesordenado {index}");*/
         #endregion
 
         #region Tipos nulables
+        /*
+        //Nullable<>
+        int? numero = null;
+
+        string? texto = null;
+        Console.WriteLine($"Longitud de texto = {texto}");
+        */
         #endregion
+
+
     }
 }
