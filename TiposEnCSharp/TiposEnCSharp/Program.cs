@@ -33,18 +33,27 @@
         #endregion
 
         #region Tipo cadena y caracter
-        char letra = 'l';
-        char letra2 = '\x006C';
-        char letra3 = (char)108;
-        Console.WriteLine($"letra = {letra}");
-        Console.WriteLine($"letra2 = {letra2}");
-        Console.WriteLine($"letra3 = {letra3}");
+        /*char letra = 'l';
+       char letra2 = '\x006C';
+       char letra3 = (char)108;
+       Console.WriteLine($"letra = {letra}");
+       Console.WriteLine($"letra2 = {letra2}");
+       Console.WriteLine($"letra3 = {letra3}");
 
-        char letraMayuscula = char.ToUpper(letra);
-        Console.WriteLine($"letraMayuscula = {letraMayuscula}");
+       char letraMayuscula = char.ToUpper(letra);
+       Console.WriteLine($"letraMayuscula = {letraMayuscula}");
 
-        Console.WriteLine($"¿Es letra? {char.IsLetter(letra)}");
-        Console.WriteLine($"¿Es número? {char.IsNumber(letra)}");
+       Console.WriteLine($"¿Es letra? {char.IsLetter(letra)}");
+       Console.WriteLine($"¿Es número? {char.IsNumber(letra)}");*/
+
+        string holamundo = "Hola mundo";
+        Console.WriteLine($"Longitud de hola: {holamundo.Length}");
+
+        string soloHola = holamundo.Substring(0, 4);
+        Console.WriteLine(soloHola);
+
+        Console.WriteLine($"holamundo contiene la palabra mundo: {holamundo.Contains("mundo")}");
+
         #endregion
 
         #region Tipo boleano
