@@ -3,6 +3,7 @@
     private static void Main(string[] args)
     {
         #region Tipos numéricos
+        /*
         Console.WriteLine("Tipos numéricos:");
 
         int miInt = -100;
@@ -28,6 +29,26 @@
 
         //Conversión entre tipos numéricos
         byte sumaByte = (byte)suma;
+        byte sumaByte = (byte)suma; */
+        #endregion
+
+        #region Tipo cadena y caracter
+        char letra = 'l';
+        char letra2 = '\x006C';
+        char letra3 = (char)108;
+        Console.WriteLine($"letra = {letra}");
+        Console.WriteLine($"letra2 = {letra2}");
+        Console.WriteLine($"letra3 = {letra3}");
+
+        char letraMayuscula = char.ToUpper(letra);
+        Console.WriteLine($"letraMayuscula = {letraMayuscula}");
+
+        Console.WriteLine($"¿Es letra? {char.IsLetter(letra)}");
+        Console.WriteLine($"¿Es número? {char.IsNumber(letra)}");
+        #endregion
+
+        #region Tipo boleano
+
         #endregion
     }
 }
