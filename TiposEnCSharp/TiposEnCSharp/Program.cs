@@ -33,7 +33,9 @@
         #endregion
 
         #region Tipo cadena y caracter
-        /*char letra = 'l';
+        /* Tipo caracter
+         
+       char letra = 'l';
        char letra2 = '\x006C';
        char letra3 = (char)108;
        Console.WriteLine($"letra = {letra}");
@@ -46,17 +48,30 @@
        Console.WriteLine($"¿Es letra? {char.IsLetter(letra)}");
        Console.WriteLine($"¿Es número? {char.IsNumber(letra)}");*/
 
+        /* Tipo cadena
+
         string holamundo = "Hola mundo";
         Console.WriteLine($"Longitud de hola: {holamundo.Length}");
 
         string soloHola = holamundo.Substring(0, 4);
         Console.WriteLine(soloHola);
 
-        Console.WriteLine($"holamundo contiene la palabra mundo: {holamundo.Contains("mundo")}");
+        Console.WriteLine($"holamundo contiene la palabra mundo: {holamundo.Contains("mundo")}"); */
 
         #endregion
 
         #region Tipo boleano
+        int edad = 15;
+        bool esMayor = edad >= 18;
+
+        if(esMayor)
+        {
+            Console.WriteLine("Es mayor de edad");
+        }else
+        {
+            Console.WriteLine("No es mayor de edad");
+        }
+        Console.WriteLine($"valor de esMayor {esMayor}");
 
         #endregion
     }
