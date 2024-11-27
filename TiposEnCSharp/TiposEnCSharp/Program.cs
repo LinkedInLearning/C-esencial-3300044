@@ -74,5 +74,33 @@
         Console.WriteLine($"valor de esMayor {esMayor}");
 
         #endregion
+
+        #region Arreglos
+        
+        int[] numeros = new int[5]; // Declaración
+        numeros[0] = 10; // Asignación
+        // 10, , , ,
+
+
+        // Inicialización directa
+        int[] miArreglo = [1,2,3,4,5];
+        int ultimoValor = miArreglo[4];
+
+        
+        // Recorrido
+        foreach( int i in miArreglo)
+        {
+            Console.WriteLine($"{i}");
+        }
+
+        // Arreglos multidimensionales
+        int[,] matrizB =
+        {
+            {1,2 },
+            {3,4},
+            {5,6 }
+        };
+        matrizB[0,1] = 10; //Modificar el valor de una posición en matriz bidimensional 
+        #endregion
     }
 }
