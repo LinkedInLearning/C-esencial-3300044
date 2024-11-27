@@ -1,4 +1,6 @@
-﻿internal class Program
+﻿using System;
+
+internal class Program
 {
     private static void Main(string[] args)
     {
@@ -101,6 +103,30 @@
             {5,6 }
         };
         matrizB[0,1] = 10; //Modificar el valor de una posición en matriz bidimensional 
+
+
+        //Operaciones con arreglos
+        int[] arregloDesordenado = [5, 9, 100, 4, 5, 25];
+
+        int tamañoArreglo = arregloDesordenado.Length;
+        int dimensiones = matrizB.Rank;
+
+        Console.WriteLine($" tamañoArreglo arregloDesordenado {tamañoArreglo}");
+        Console.WriteLine($" dimensiones de matrizB {dimensiones}");
+
+        Array.Sort(arregloDesordenado);
+        Console.WriteLine($" arregloDesordenado ordenado");
+        Console.WriteLine(string.Join(", ", arregloDesordenado));
+
+        Array.Reverse(arregloDesordenado);
+        Console.WriteLine($" arregloDesordenado ordenado invertido (reverse)");
+        Console.WriteLine(string.Join(", ", arregloDesordenado));
+
+        int index = Array.IndexOf(arregloDesordenado, 100);
+        Console.WriteLine($" index of 100 en arregloDesordenado {index}");
+        #endregion
+
+        #region Tipos nulables
         #endregion
     }
 }
