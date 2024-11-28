@@ -232,6 +232,7 @@ internal class Program
         #endregion
 
         #region Excepciones
+        /*
         bool error = false;
         try
         {
@@ -262,7 +263,19 @@ internal class Program
             //registrar el error 
             error = false;
         }
-       
+       */
+        #endregion
+
+        #region throw
+        Console.Write("Ingrese un número mayor a 0: ");
+        int numero = int.Parse(Console.ReadLine());
+
+        if (numero <= 0)
+        {
+            throw new ArgumentException("Número debe ser mayor que cero");
+        }
+
+        Console.WriteLine($"Número válido: {numero}");
         #endregion
     }
 }
