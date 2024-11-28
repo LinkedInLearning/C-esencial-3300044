@@ -178,6 +178,7 @@ internal class Program
         #endregion
 
         #region Ciclo for
+        /*
         Console.Write("Ingrese un número entero");
         int numero = int.Parse(Console.ReadLine());
 
@@ -190,7 +191,18 @@ internal class Program
         for (int i = 0; i < canciones.Length; i++)
         {
             Console.WriteLine($"{i} {canciones[i]}");
+        }*/
+        #endregion
+
+        #region Ciclo while
+        string[] canciones = { "Satisfaction", "Respect", "Stairway to heaven" };
+        int cantidad = canciones.Length;
+        while (cantidad > 0)
+        {
+            Console.WriteLine($"{cantidad} - {canciones[cantidad-1]}");
+            cantidad--; //decremento para iterar y evitar ciclo infinito
         }
+
         #endregion
     }
 }
