@@ -232,8 +232,10 @@ internal class Program
         #endregion
 
         #region Excepciones
+        bool error = false;
         try
         {
+           
             Console.Write("Ingrese el numerador: ");
             int numerador = int.Parse(Console.ReadLine());
 
@@ -247,10 +249,18 @@ internal class Program
         {
             Console.WriteLine("Error: No se puede dividir por cero.");
             Console.WriteLine($"{ex.Message}");
+            error = true;
         }
         catch (FormatException ex) {
             Console.WriteLine("Erro de formato: Ingresa un número entero");
             Console.WriteLine($"{ex.StackTrace}");
+            error = true;
+        }
+        finally
+        {
+            Console.WriteLine($"Operación finalizada");
+            //registrar el error 
+            error = false;
         }
        
         #endregion
