@@ -194,14 +194,25 @@ internal class Program
         }*/
         #endregion
 
-        #region Ciclo while
+        #region Ciclo while y do-while
+
+        /* While */
         string[] canciones = { "Satisfaction", "Respect", "Stairway to heaven" };
-        int cantidad = canciones.Length;
+        int cantidad = 0;
         while (cantidad > 0)
         {
-            Console.WriteLine($"{cantidad} - {canciones[cantidad-1]}");
+            Console.WriteLine($"{cantidad}");
             cantidad--; //decremento para iterar y evitar ciclo infinito
         }
+
+        /* Do-while */
+        Console.WriteLine($"Do-while");
+        int cantidad2 = 0;
+        do
+        {
+            Console.WriteLine($"{cantidad2}");
+            cantidad2--; //decremento para iterar y evitar ciclo infinito
+        } while (cantidad2 > 0);
 
         #endregion
     }
