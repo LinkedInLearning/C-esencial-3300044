@@ -151,6 +151,7 @@ internal class Program
         #endregion
 
         #region Switch
+        /*
         Console.Write("Ingrese la duración de la canción (en segundos): ");
         int duracion = int.Parse(Console.ReadLine());
         bool esAdmin = true;
@@ -173,6 +174,22 @@ internal class Program
             default:
                 Console.WriteLine("La canción dura más de 5 minutos");
                 break;
+        }*/
+        #endregion
+
+        #region Ciclo for
+        Console.Write("Ingrese un número entero");
+        int numero = int.Parse(Console.ReadLine());
+
+        for (int contador = 0; contador <= numero; contador++)
+        {
+            Console.WriteLine($"{contador}");
+        }
+
+        string[] canciones = { "Satisfaction", "Respect", "Stairway to heaven" };
+        for (int i = 0; i < canciones.Length; i++)
+        {
+            Console.WriteLine($"{i} {canciones[i]}");
         }
         #endregion
     }
