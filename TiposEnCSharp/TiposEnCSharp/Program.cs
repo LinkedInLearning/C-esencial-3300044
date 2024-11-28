@@ -12,12 +12,7 @@ internal class Program
         Console.Write("Ingrese otro número: ");
         int y = int.Parse(Console.ReadLine());
 
-        // +
-        // -
-        // *
-        // /
-        // %
-
+        /*
         int suma = x + y;
         int resta = x - y;
         int mult = x * y;
@@ -39,7 +34,23 @@ internal class Program
         Console.WriteLine($"divDoub = {divDoub}");
 
         Console.WriteLine($"módulo = {10 % 2 == 0}"); // True
+        */
 
+        #endregion
+
+        #region Operadores de asignación
+        //=
+        // +=
+        x += 5; // x = x + 5;
+        y -= 5;
+        // *=
+        // /=
+        // %=
+
+        // &=
+
+        Console.WriteLine($"x = {x}");
+        Console.WriteLine($"y = {y}");
         #endregion
 
     }
