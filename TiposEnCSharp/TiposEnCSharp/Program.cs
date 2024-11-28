@@ -39,6 +39,7 @@ internal class Program
         #endregion
 
         #region Operadores de asignación
+        /*
         //=
         // +=
         x += 5; // x = x + 5;
@@ -51,6 +52,36 @@ internal class Program
 
         Console.WriteLine($"x = {x}");
         Console.WriteLine($"y = {y}");
+        */
+        #endregion
+        #region Operadores de comparación
+        if (x == y)
+        {
+            Console.WriteLine($"x es igual a y");
+        }
+        if (x != y)
+        {
+            Console.WriteLine($"x es diferente a y");
+        }
+        if (x > y)
+        {
+            Console.WriteLine($"x es mayor que y");
+        }
+        if (x >= y)
+        {
+            Console.WriteLine($"x es igual o mayor a y");
+        }
+
+        //"Hola" "hola"
+        if ("Hola" == "hola") { //false 
+        }
+
+        // los operador que usemos en un ciclo for, cambia el número de iteraciones
+        for(int i = 0; i <= x; i++)
+        {
+        }
+        Console.WriteLine(x+ y > 10);
+
         #endregion
 
     }
