@@ -54,7 +54,7 @@ internal class Program
         Console.WriteLine($"y = {y}");
         */
         #endregion
-        
+
         #region Operadores de comparación
         /*
         if (x == y)
@@ -88,6 +88,7 @@ internal class Program
         #endregion
 
         #region Operadores lógicos
+        /*
         // AND &&
         // OR ||
         // NOT !
@@ -115,7 +116,38 @@ internal class Program
         // Mensaje adicional
         bool esCancionLarga = duracion > 300;
         Console.WriteLine($"¿La canción es larga (más de 5 minutos)? {esCancionLarga}");
+        
+        #endregion*/
         #endregion
+
+        #region Sentencias condicionales
+        Console.Write("Ingrese la duración de la canción (en segundos): ");
+        int duracion = int.Parse(Console.ReadLine());
+        bool esAdmin = true;
+
+        // Evaluar si la canción puede reproducirse
+        if (duracion == 0)
+        {
+            Console.WriteLine("Duración 0 es inválida");
+            if(esAdmin)
+            {
+                Console.WriteLine("Indica una nueva duración");
+                //Read
+            }
+            else
+            {
+                //if(esAdmin) Console.WriteLine("Esta es otra condición anidada en el else");
+
+            }
+        }
+        else if (duracion <= 300)
+        {
+            Console.WriteLine("La canción dura 5 minutos o menos");
+        }
+        else
+        {
+            Console.WriteLine("La canción dura más de 5 minutos");
+        }
         #endregion
 
     }
