@@ -216,6 +216,7 @@ internal class Program
         #endregion
 
         #region Ciclo foreach
+        /*
         string[] canciones = { "Satisfaction", "Respect", "Stairway to heaven" };
 
         for (int i = 0; i < canciones.Length; i++)
@@ -226,8 +227,32 @@ internal class Program
         foreach (var cancion in canciones)
         {
             Console.WriteLine($"{cancion}");
-        }
+        } */
 
+        #endregion
+
+        #region Excepciones
+        try
+        {
+            Console.Write("Ingrese el numerador: ");
+            int numerador = int.Parse(Console.ReadLine());
+
+            Console.Write("Ingrese el denominador: ");
+            int denominador = int.Parse(Console.ReadLine());
+
+            int resultado = numerador / denominador;
+            Console.WriteLine($"Resultado: {resultado}");
+        }
+        catch (DivideByZeroException ex)
+        {
+            Console.WriteLine("Error: No se puede dividir por cero.");
+            Console.WriteLine($"{ex.Message}");
+        }
+        catch (FormatException ex) {
+            Console.WriteLine("Erro de formato: Ingresa un número entero");
+            Console.WriteLine($"{ex.StackTrace}");
+        }
+       
         #endregion
     }
 }
