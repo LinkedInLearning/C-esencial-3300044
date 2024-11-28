@@ -2,23 +2,43 @@
 
 internal class Program
 {
-    public record Cancion (string Titulo, string Artista, TimeSpan Duracion);
     private static void Main(string[] args)
     {
-        #region Tipo record
-        var cancion = new Cancion("Bohemian Rhapsody", "Queen", new TimeSpan(0, 5, 55));
-        //Console.WriteLine($"{}");
+        #region Operadores matemáticos
 
-        var cancion2 = cancion with { Duracion = new TimeSpan(0, 5, 58) };
+        Console.Write("Ingresa un número: ");
+        int x = int.Parse(Console.ReadLine());
 
-        var cancion3 = new Cancion("Bohemian Rhapsody", "Queen", new TimeSpan(0, 5, 55));
-        if (cancion == cancion3)
-        {
-            Console.WriteLine($"Son iguales!");
-        }
+        Console.Write("Ingrese otro número: ");
+        int y = int.Parse(Console.ReadLine());
 
-        var (titulo, artista, tiempo) = cancion;
-        Console.WriteLine($"{tiempo}");
+        // +
+        // -
+        // *
+        // /
+        // %
+
+        int suma = x + y;
+        int resta = x - y;
+        int mult = x * y;
+        int div = x / y;
+        int mod = x % y;
+
+        Console.WriteLine($"suma = {suma}");
+        Console.WriteLine($"suma = {resta}");
+        Console.WriteLine($"suma = {mult}");
+        Console.WriteLine($"suma = {div}");
+        Console.WriteLine($"suma = {mod}");
+
+        int resultado = (2 + 5) * 4; //28
+        Console.WriteLine($"resultado = {resultado}");
+
+        int divEntero = 5 / 2; //2
+        double divDoub = 5 / 2.0; //2.5;
+        Console.WriteLine($"divEntero = {divEntero}");
+        Console.WriteLine($"divDoub = {divDoub}");
+
+        Console.WriteLine($"módulo = {10 % 2 == 0}"); // True
 
         #endregion
 
