@@ -195,8 +195,8 @@ internal class Program
         #endregion
 
         #region Ciclo while y do-while
-
-        /* While */
+        /*
+        // While
         string[] canciones = { "Satisfaction", "Respect", "Stairway to heaven" };
         int cantidad = 0;
         while (cantidad > 0)
@@ -205,14 +205,28 @@ internal class Program
             cantidad--; //decremento para iterar y evitar ciclo infinito
         }
 
-        /* Do-while */
+        // Do-while 
         Console.WriteLine($"Do-while");
         int cantidad2 = 0;
         do
         {
             Console.WriteLine($"{cantidad2}");
             cantidad2--; //decremento para iterar y evitar ciclo infinito
-        } while (cantidad2 > 0);
+        } while (cantidad2 > 0);*/
+        #endregion
+
+        #region Ciclo foreach
+        string[] canciones = { "Satisfaction", "Respect", "Stairway to heaven" };
+
+        for (int i = 0; i < canciones.Length; i++)
+        {
+            Console.WriteLine($"{i} {canciones[i]}");
+        }
+
+        foreach (var cancion in canciones)
+        {
+            Console.WriteLine($"{cancion}");
+        }
 
         #endregion
     }
