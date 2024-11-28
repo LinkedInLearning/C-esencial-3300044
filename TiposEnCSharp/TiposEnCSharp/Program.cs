@@ -121,7 +121,7 @@ internal class Program
         #endregion
 
         #region Sentencias condicionales
-        Console.Write("Ingrese la duración de la canción (en segundos): ");
+        /*Console.Write("Ingrese la duración de la canción (en segundos): ");
         int duracion = int.Parse(Console.ReadLine());
         bool esAdmin = true;
 
@@ -147,8 +147,33 @@ internal class Program
         else
         {
             Console.WriteLine("La canción dura más de 5 minutos");
-        }
+        }*/
         #endregion
 
+        #region Switch
+        Console.Write("Ingrese la duración de la canción (en segundos): ");
+        int duracion = int.Parse(Console.ReadLine());
+        bool esAdmin = true;
+
+        switch (duracion)
+        {
+            case 0:
+                Console.WriteLine("Duración 0 es inválida");
+                if (esAdmin)
+                {
+                    Console.WriteLine("Indica una nueva duración");
+                    // Leer nueva entrada si es necesario
+                }
+                break;
+
+            case <= 300:
+                Console.WriteLine("La canción dura 5 minutos o menos");
+                break;
+
+            default:
+                Console.WriteLine("La canción dura más de 5 minutos");
+                break;
+        }
+        #endregion
     }
 }
