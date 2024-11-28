@@ -5,14 +5,14 @@ internal class Program
     private static void Main(string[] args)
     {
         #region Operadores matemáticos
-
+        /*
         Console.Write("Ingresa un número: ");
         int x = int.Parse(Console.ReadLine());
 
         Console.Write("Ingrese otro número: ");
         int y = int.Parse(Console.ReadLine());
 
-        /*
+        
         int suma = x + y;
         int resta = x - y;
         int mult = x * y;
@@ -54,7 +54,9 @@ internal class Program
         Console.WriteLine($"y = {y}");
         */
         #endregion
+        
         #region Operadores de comparación
+        /*
         if (x == y)
         {
             Console.WriteLine($"x es igual a y");
@@ -81,7 +83,39 @@ internal class Program
         {
         }
         Console.WriteLine(x+ y > 10);
+        */
 
+        #endregion
+
+        #region Operadores lógicos
+        // AND &&
+        // OR ||
+        // NOT !
+
+        #region ejercicio
+        Console.Write("Ingrese la duración de la canción (en segundos): ");
+        int duracion = int.Parse(Console.ReadLine());
+
+        Console.Write("¿Es la canción favorita del usuario? (true/false): ");
+        bool esFavorita = bool.Parse(Console.ReadLine());
+
+        Console.Write("¿Está habilitado el modo aleatorio? (true/false): ");
+        bool modoAleatorio = bool.Parse(Console.ReadLine());
+
+        // Evaluar si la canción puede reproducirse
+        if ((duracion <= 300 && !modoAleatorio) || esFavorita)
+        {
+            Console.WriteLine("La canción se reproduce.");
+        }
+        else
+        {
+            Console.WriteLine("La canción no se reproduce.");
+        }
+
+        // Mensaje adicional
+        bool esCancionLarga = duracion > 300;
+        Console.WriteLine($"¿La canción es larga (más de 5 minutos)? {esCancionLarga}");
+        #endregion
         #endregion
 
     }
