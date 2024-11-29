@@ -32,11 +32,25 @@ namespace PooEnCsharp
         #endregion
 
         #region Constructores
+        public Cancion()
+        {
+            Titulo = "Sin titulo";
+            Artista = "Desconocido";
+            Duracion = 0;
+        }
+        
         public Cancion(string titulo, string artista, int duracion)
         {
             Titulo = titulo;
             Artista = artista;
             Duracion = duracion;
+        }
+
+        public void Deconstruct(out string titulo, out string artista, out int duracion)
+        {
+            titulo = Titulo;
+            artista = Artista;
+            duracion = Duracion;
         }
         #endregion
 

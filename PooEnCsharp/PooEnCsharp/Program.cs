@@ -4,22 +4,20 @@ internal class Program
 {
     private static void Main(string[] args)
     {
-        try { 
-            // Instancia de Cancion
+        try {
+            // canción de constructor por defecto
+            Cancion cancionDef = new Cancion();
+            cancionDef.MostrarInformacion();
+
+
+            // Instancia de Cancion - sobrecarga de constructor
             Cancion cancion = new Cancion("Imagine", "John Lennon", 183);
-
-            // Mostrar información de la canción
             cancion.MostrarInformacion();
 
-            Console.WriteLine($"¿Es una canción corta?: {cancion.EsCorta()}");
-            Console.WriteLine($"Duración convertida: {cancion.ConvertirDuracionAMinutos()}");
-
-            // Actualizar la duración usando un parámetro
-            Console.WriteLine("\nActualizando duración...");
-            cancion.ActualizarDuracion(320);
-
-            // Mostrar información actualizada
-            cancion.MostrarInformacion();
+            // Usando el deconstructor
+            Console.WriteLine("\nDesempaquetando la canción...");
+            var (titulo, artista, duracion) = cancion;
+            Console.WriteLine($"Título: {titulo}, Artista: {artista}, Duración: {duracion} segundos");
         }
         catch (ArgumentException ex)
         {
