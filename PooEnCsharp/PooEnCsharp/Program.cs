@@ -8,22 +8,21 @@ internal class Program
             // Crear una lista de reproducción 
             ListaReproduccion listaGeneral = new ListaReproduccion("Mis Canciones");
             listaGeneral.AgregarCancion("Imagine");
-            listaGeneral.AgregarCancion("Let It Be");
             listaGeneral.AgregarCancion("Bohemian Rhapsody");
 
             // Crear una lista de reproducción de favoritos
             ListaFavoritos listaFavoritos = new ListaFavoritos("Favoritos del Rock");
             listaFavoritos.AgregarCancion("Stairway to Heaven");
-            listaFavoritos.AgregarCancion("Hotel California");
-            listaFavoritos.AgregarCancion("Smoke on the Water");
 
-            // Marcar canciones como favoritas
-            listaFavoritos.MarcarComoFavorita("Stairway to Heaven");
-            listaFavoritos.MarcarComoFavorita("Hotel California");
+            /*/ Reproducir listas usando la interface
+            Console.WriteLine("\nReproduciendo listas:");
+            IReproducible reproducibleGeneral = listaGeneral;
+            reproducibleGeneral.Reproducir();
 
-            // Mostrar toda la información de las listas
             Console.WriteLine();
-            listaFavoritos.MostrarTodo(); // Método específico de la clase derivada
+
+            IReproducible reproducibleFavoritos = listaFavoritos;
+            reproducibleFavoritos.Reproducir();*/
         }
         catch (ArgumentException ex)
         {

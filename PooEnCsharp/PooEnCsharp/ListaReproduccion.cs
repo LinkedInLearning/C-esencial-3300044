@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace PooEnCsharp
 {
-    public class ListaReproduccion
+    public class ListaReproduccion : IReproducible
     {
         #region Propiedades
         public string Nombre { get; private set; }
@@ -36,6 +36,12 @@ namespace PooEnCsharp
             {
                 Console.WriteLine($"- {cancion}");
             }
+        }
+
+        public void Reproducir()
+        {
+            Console.WriteLine("Reproduciendo lista de Reproducción");
+            foreach(var canc in Canciones) { Console.WriteLine($" {canc} "); };
         }
         #endregion
     }

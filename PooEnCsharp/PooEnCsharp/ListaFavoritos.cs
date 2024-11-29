@@ -7,7 +7,7 @@ using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace PooEnCsharp
 {
-    public class ListaFavoritos : ListaReproduccion
+    public class ListaFavoritos : ListaReproduccion, IReproducible
     {
         private List<string> Favoritos { get; set; }
 
@@ -50,6 +50,12 @@ namespace PooEnCsharp
             // Llama al método protegido de la clase base
             MostrarCanciones();
             MostrarFavoritas();
+        }
+
+        public new void Reproducir()
+        {
+            Console.WriteLine("Reproduciendo lista de favoritos");
+            //podemos hacer algo diferente en esta implementación
         }
         #endregion
 
