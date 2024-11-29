@@ -4,16 +4,9 @@ internal class Program
 {
     private static void Main(string[] args)
     {
-        /* POO:
-         * Herencia,
-         * Polimorfismo,
-         * Abstracción,
-         * Encapsulamiento
-         */
-
-
-        // Crear una instancia de Cancion
+        // Instancia de Cancion
         Cancion cancion = new Cancion("Imagine", "John Lennon", 183);
+        Cancion cancionFav = new Cancion("Crazy", "Aerosmith", 185);
 
         // Mostrar información de la canción
         cancion.MostrarInformacion();
