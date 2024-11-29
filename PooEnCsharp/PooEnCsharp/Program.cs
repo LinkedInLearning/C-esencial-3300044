@@ -5,20 +5,25 @@ internal class Program
     private static void Main(string[] args)
     {
         try {
-            // Instancia de Cancion - sobrecarga de constructor
-            Cancion cancion = new Cancion("Imagine", "John Lennon", 183);
+            // Crear una lista de reproducción 
+            ListaReproduccion listaGeneral = new ListaReproduccion("Mis Canciones");
+            listaGeneral.AgregarCancion("Imagine");
+            listaGeneral.AgregarCancion("Let It Be");
+            listaGeneral.AgregarCancion("Bohemian Rhapsody");
 
-            // Acceso a método público
-            cancion.MostrarInformacion();
+            // Crear una lista de reproducción de favoritos
+            ListaFavoritos listaFavoritos = new ListaFavoritos("Favoritos del Rock");
+            listaFavoritos.AgregarCancion("Stairway to Heaven");
+            listaFavoritos.AgregarCancion("Hotel California");
+            listaFavoritos.AgregarCancion("Smoke on the Water");
 
-            // Acceso a método interno
-            cancion.ActualizarDuracion(200);
-            // Mostrar información actualizada
-            cancion.MostrarInformacion();
+            // Marcar canciones como favoritas
+            listaFavoritos.MarcarComoFavorita("Stairway to Heaven");
+            listaFavoritos.MarcarComoFavorita("Hotel California");
 
-            //Acceso a método protegido ConvertirDuración NO es posible
-            //cancion.ConvertirDuracionAMinutos(200);
-
+            // Mostrar toda la información de las listas
+            Console.WriteLine();
+            listaFavoritos.MostrarTodo(); // Método específico de la clase derivada
         }
         catch (ArgumentException ex)
         {
