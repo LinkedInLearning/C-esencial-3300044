@@ -28,7 +28,8 @@ namespace PooEnCsharp
             }
         }
         public string Artista { get; set; }
-        public int Duracion { get; set; } // Duración en segundos
+        
+        public int Duracion { get; set; } 
         #endregion
 
         #region Constructores
@@ -55,21 +56,23 @@ namespace PooEnCsharp
         #endregion
 
         #region Métodos
+
+        // Método público
         public void MostrarInformacion()
         {
             Console.WriteLine($"Título: {Titulo}, Artista: {Artista}, Duración: {Duracion} segundos");
         }
-        public bool EsCorta()
-        {
-            return Duracion < 300; // Devuelve true si la duración es menor a 5 minutos
-        }
-        public string ConvertirDuracionAMinutos()
+
+        // Método protegido
+        protected string ConvertirDuracionAMinutos()
         {
             int minutos = Duracion / 60;
             int segundos = Duracion % 60;
             return $"{minutos} minutos y {segundos} segundos";
         }
-        public void ActualizarDuracion(int nuevaDuracion)
+
+        // Método interno
+        internal void ActualizarDuracion(int nuevaDuracion)
         {
             if (nuevaDuracion > 0)
             {
