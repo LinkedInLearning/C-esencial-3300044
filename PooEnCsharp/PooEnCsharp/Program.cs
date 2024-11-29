@@ -7,10 +7,18 @@ internal class Program
         try { 
             // Instancia de Cancion
             Cancion cancion = new Cancion("Imagine", "John Lennon", 183);
-            Cancion cancionFav = new Cancion("Crazy", "Aerosmith", 185);
-            Cancion cancion2 = new Cancion("", "Aerosmith", 185);
 
             // Mostrar información de la canción
+            cancion.MostrarInformacion();
+
+            Console.WriteLine($"¿Es una canción corta?: {cancion.EsCorta()}");
+            Console.WriteLine($"Duración convertida: {cancion.ConvertirDuracionAMinutos()}");
+
+            // Actualizar la duración usando un parámetro
+            Console.WriteLine("\nActualizando duración...");
+            cancion.ActualizarDuracion(320);
+
+            // Mostrar información actualizada
             cancion.MostrarInformacion();
         }
         catch (ArgumentException ex)

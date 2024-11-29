@@ -45,6 +45,28 @@ namespace PooEnCsharp
         {
             Console.WriteLine($"Título: {Titulo}, Artista: {Artista}, Duración: {Duracion} segundos");
         }
+        public bool EsCorta()
+        {
+            return Duracion < 300; // Devuelve true si la duración es menor a 5 minutos
+        }
+        public string ConvertirDuracionAMinutos()
+        {
+            int minutos = Duracion / 60;
+            int segundos = Duracion % 60;
+            return $"{minutos} minutos y {segundos} segundos";
+        }
+        public void ActualizarDuracion(int nuevaDuracion)
+        {
+            if (nuevaDuracion > 0)
+            {
+                Duracion = nuevaDuracion;
+                Console.WriteLine($"Duración actualizada a {Duracion} segundos.");
+            }
+            else
+            {
+                Console.WriteLine("La duración debe ser mayor a 0.");
+            }
+        }
         #endregion
     }
 }
